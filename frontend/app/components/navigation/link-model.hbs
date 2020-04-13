@@ -1,0 +1,8 @@
+<div class="row nav-link horizontal-end {{ if @width @width "" }} {{ if @noLeftMargin "" "ml-1" }}">
+	<LinkTo 
+		@route={{ @route }} 
+		@model={{ @model }} 
+		...attributes>
+			{{ yield }}
+	</LinkTo>
+</div>

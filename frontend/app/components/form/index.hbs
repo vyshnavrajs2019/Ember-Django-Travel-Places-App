@@ -1,0 +1,7 @@
+<form
+	method={{ @method }}
+	class="form" 
+	{{ on 'submit' @handleSubmit }}
+	...attributes>
+		{{ yield }}
+</form>

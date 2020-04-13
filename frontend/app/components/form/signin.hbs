@@ -1,0 +1,20 @@
+<Form
+	@method='post'
+	@handleSubmit={{ @handleSubmit }}
+	class="row sm-12">
+		<h3 class="mb-1">{{ if @formTitle @formTitle "Welcome Back!" }}</h3>
+		<Input 
+			@value={{ @username }}
+			class="row sm-12 input input-md pl-1 pr-1 mb-075"
+			placeholder="Username"></Input>
+		
+		<Input
+			@value={{ @password }}
+			type="password" 
+			class="row sm-12 input input-md pl-1 pr-1 mb-075"
+			placeholder="Password"></Input>
+		
+		{{ yield }}
+
+		<button type="submit" class="row sm-6 md-4 horizontal-center vertical-center button button-md button-primary">{{if @buttonTitle @buttonTitle "Sign In"}}</button>
+</Form>

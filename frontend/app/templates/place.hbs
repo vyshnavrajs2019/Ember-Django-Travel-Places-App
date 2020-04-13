@@ -1,0 +1,29 @@
+<div class="row sm-12">
+	<h2 class="sm-12 mb-2">{{ @model.name }}</h2>
+
+	<ContentSection @heading="About">
+		{{ @model.about }}
+	</ContentSection>
+
+	<ContentSection @heading="History">
+		{{ @model.history }}
+	</ContentSection>
+
+	<ContentSection @heading="Best Time To Visit">
+		{{ @model.bestTime }}
+	</ContentSection>
+
+	{{!-- <Form @method='post' class="col sm-12">
+		<h3 class="mb-05">About</h3>
+		<textarea class="textarea textarea-lg p-1 sm-12 mb-2" placeholder="About Kakkayam View Point"></textarea>
+
+		<h3 class="mb-05">History</h3>
+		<textarea class="textarea textarea-lg p-1 sm-12 mb-2" placeholder="History of Kakkayam View Point"></textarea>
+
+		<h3 class="mb-05">Best Time To Visit</h3>
+		<textarea class="textarea textarea-md p-1 sm-12 mb-2" placeholder="Best time to visit Kakkayam View Point"></textarea>
+
+		<button type="submit" class="row sm-6 md-4 horizontal-center vertical-center button button-md button-primary">Save</button>
+	</Form> --}}
+
+</div>

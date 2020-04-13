@@ -1,0 +1,36 @@
+<h2>Create A New Place</h2>
+<Form
+	@method='post'
+	@handleSubmit={{ this.handleContrib }}
+	class="row sm-12 mb-3 mt-1">
+		<Input
+			@value={{ this.place }}
+			class="row sm-12 input input-md pl-1 pr-1 mb-075"
+			placeholder="Place Name">
+		</Input>
+
+		<Input 
+			@value={{ this.district }}
+			class="row sm-12 input input-md pl-1 pr-1 mb-075"
+			placeholder="District">
+		</Input>
+
+		<Input 
+			@value={{ this.state }}
+			class="row sm-12 input input-md pl-1 pr-1 mb-075"
+			placeholder="State">
+		</Input>
+		
+		<button type="submit" class="row sm-6 md-4 horizontal-center vertical-center button button-md button-primary">Create</button>
+</Form>
+
+<h2 class="mb-1">Your Contributions</h2>
+{{#each @model as |contrib|}}
+	<Contrib
+		@place={{ contrib.name }}
+		@to="contrib.request">
+		<button type="button" class="button button-sm mt-1 sm-3" {{ on "click" (fn this.deleteContribution contrib.name) }}>Delete</button>
+	</Contrib>
+{{else}}
+	<p>You don't have any contributions yet.</p>
+{{/each}}

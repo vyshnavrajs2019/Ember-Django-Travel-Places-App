@@ -1,0 +1,16 @@
+<div class="row sm-12">
+	<h2 class="sm-12 mb-2">{{ @model.name }}</h2>
+	
+	<Form @method='post' class="col sm-12" @handleSubmit={{ this.handleSubmit }}>
+		<h3 class="mb-05">About</h3>
+		<Textarea @value={{ this.about }} class="textarea textarea-lg p-1 sm-12 mb-2" placeholder="About {{ @model.name }}"></Textarea>
+
+		<h3 class="mb-05">History</h3>
+		<Textarea @value={{ this.history }} class="textarea textarea-lg p-1 sm-12 mb-2" placeholder="History of {{ @model.name }}"></Textarea>
+
+		<h3 class="mb-05">Best Time To Visit</h3>
+		<Textarea @value={{ this.bestTime }} class="textarea textarea-md p-1 sm-12 mb-2" placeholder="Best time to visit {{ @model.name }}"></Textarea>
+
+		<button type="submit" class="row sm-6 md-4 horizontal-center vertical-center button button-md button-primary">Save</button>
+	</Form>
+</div>

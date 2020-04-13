@@ -1,0 +1,38 @@
+<header>
+	<Center class="p-1">
+		<div class="row sm-12 lg-3">
+			<h2><LinkTo @route="home">TravelPlaces</LinkTo></h2>
+		</div>
+		<div class="row sm-12 lg-9 vertical-end">
+			<Navigation class="horizontal-end">
+				{{#if this.session.isAuthenticated }}
+					<Navigation::Link 
+						@route="contrib" 
+						@width="sm-3 lg-2"
+						@noLeftMargin={{ true }}>
+						Contrib
+					</Navigation::Link>
+					<Navigation::Link 
+						@route="logout" 
+						@width="sm-3 lg-2"
+						@noLeftMargin={{ true }}>
+						Sign Out
+					</Navigation::Link>
+				{{else}}
+					<Navigation::Link 
+						@route="login" 
+						@width="sm-3 lg-2" 
+						@noLeftMargin={{ true }}>
+						Sign In
+					</Navigation::Link>
+					<Navigation::Link 
+						@route="register" 
+						@width="sm-3 lg-2"
+						@noLeftMargin={{ true }}>
+						Sign Up
+					</Navigation::Link>
+				{{/if}}
+			</Navigation>
+		</div>
+	</Center>
+</header>
